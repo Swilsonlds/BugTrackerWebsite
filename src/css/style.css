@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    background-color: #e5e6e6;
+}
+
+.header {
+    background-color: #818592;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center all items */
+}
+
+.logo {
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+.logo img {
+    height: 40px; /* Adjust height as needed */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox to center-align the links */
+    justify-content: center; /* Center-align the links horizontally */
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    display: inline-block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    background-color: #818592;
+}
+
+.navbar ul li a:hover {
+    color: black;
+    transition: ease-in-out all .4s; 
+}
+
+.logo, .logo-spacer {
+    flex: 1; /* Assign equal weight to the logo and the spacer */
+}
+
+/* Ensure the spacer matches the logo's dimensions for balance. If your logo has specific width, set it here. */
+.logo-spacer {
+    visibility: hidden; /* Makes the spacer invisible but still occupies space */
+}
+
+.navbar {
+    flex: 2; /* Allows the navbar to take more space, adjust as needed */
+    display: flex;
+    justify-content: center; /* Center the navbar content */
+}
+
+
+a {
+    color: #18272F;
+    position: relative;
+    text-decoration: none;
+}
+  
+a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+  
+a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.report-wrapper {
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: rgb(176, 202, 225);
+    border-radius: 5px;
+    border: 2px black solid;
+}
+.report {
+    position: relative; /* Required for absolute positioning of the buttons */
+    margin: 10px auto;
+    max-width: 90%;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px black solid;
+    padding-right: 60px; /* To leave space for the buttons */
+}
+
+.actions {
+    position: absolute;
+    top: 80px;
+    right:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.actions button {
+    margin: 10px; /* Adjust spacing between buttons */
+    height: 50px;
+}
+
+.actions button img {
+    height: 50px;
+}
+
+.report h3 {
+    margin-left: 20px;
+}
+
+.header-container {
+    position: relative; /* Allows absolute positioning inside */
+    display: flex;
+    justify-content: center; /* Centers the h1 */
+    align-items: center;
+    padding: 10px; /* Add padding as needed */
+    height: 60px; /* Adjust the height as needed */
+}
+
+.header-container h1 {
+    margin: 0; /* Removes default margin to aid in centering */
+}
+
+.sorting-dropdown {
+    position: absolute; /* Positioned absolutely relative to its parent */
+    right: 50px; /* Adjust based on desired spacing from the right edge */
+    top: 50%; /* Aligns the top of the dropdown with the container's vertical center */
+    transform: translateY(-50%); /* Centers the dropdown vertically */
+    /* Additional styling for the dropdown */
+    padding: 5px;
+}

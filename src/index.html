@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/home.js" type="module"></script>
+    <title>Home</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="/bug-tracker-2.png" alt="Company Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="logo-spacer"></div> <!-- Spacer added here -->
+    </header>
+    <div class="report-wrapper">
+        <div class="header-container">
+            <h1>Bug Reports</h1>
+            <select class="sorting-dropdown">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="severity">Severity</option>
+            </select>
+        </div>
+        <div class="report">
+            <h3>Bug Title:</h3>
+            <h3>Date Discovered:</h3>
+            <h3>Environment:</h3>
+            <h3>Steps to Replicate:</h3>
+            <h3>Expected Outcome:</h3>
+            <h3>Date Discovered:</h3>
+            <div class="actions">
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div>
+        <div class="report">
+            <h3>Bug Title:</h3>
+            <h3>Date Discovered:</h3>
+            <h3>Environment:</h3>
+            <h3>Steps to Replicate:</h3>
+            <h3>Expected Outcome:</h3>
+            <h3>Date Discovered:</h3>
+            <div class="actions">
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
