@@ -7,6 +7,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     background-color: #e5e6e6;
+    min-width: 390px;
 }
 
 .header {
@@ -14,23 +15,24 @@ body {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center all items */
+    justify-content: center; 
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .logo {
-    margin-right: auto; /* Pushes the logo to the left */
+    margin-right: auto; 
 }
 
 .logo img {
-    height: 40px; /* Adjust height as needed */
+    height: 40px; 
 }
 
 .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Use flexbox to center-align the links */
-    justify-content: center; /* Center-align the links horizontally */
+    display: flex; 
+    justify-content: center; 
 }
 
 .navbar ul li {
@@ -51,20 +53,18 @@ body {
 }
 
 .logo, .logo-spacer {
-    flex: 1; /* Assign equal weight to the logo and the spacer */
+    flex: 1; 
 }
 
-/* Ensure the spacer matches the logo's dimensions for balance. If your logo has specific width, set it here. */
 .logo-spacer {
-    visibility: hidden; /* Makes the spacer invisible but still occupies space */
+    visibility: hidden; 
 }
 
 .navbar {
-    flex: 2; /* Allows the navbar to take more space, adjust as needed */
+    flex: 2; 
     display: flex;
-    justify-content: center; /* Center the navbar content */
+    justify-content: center; 
 }
-
 
 a {
     color: #18272F;
@@ -92,20 +92,22 @@ a:hover::before {
 }
 
 .report-wrapper {
-    max-width: 90%;
+    max-width: 80%;
     margin: 20px auto;
     background-color: rgb(176, 202, 225);
     border-radius: 5px;
     border: 2px black solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .report {
-    position: relative; /* Required for absolute positioning of the buttons */
+    position: relative; 
     margin: 10px auto;
     max-width: 90%;
     background-color: white;
     border-radius: 5px;
     border: 2px black solid;
-    padding-right: 60px; /* To leave space for the buttons */
+    padding-right: 60px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .actions {
@@ -117,7 +119,7 @@ a:hover::before {
 }
 
 .actions button {
-    margin: 10px; /* Adjust spacing between buttons */
+    margin: 10px; 
     height: 50px;
 }
 
@@ -130,23 +132,22 @@ a:hover::before {
 }
 
 .header-container {
-    position: relative; /* Allows absolute positioning inside */
+    position: relative; 
     display: flex;
-    justify-content: center; /* Centers the h1 */
+    justify-content: center; 
     align-items: center;
-    padding: 10px; /* Add padding as needed */
-    height: 60px; /* Adjust the height as needed */
+    padding: 10px; 
+    height: 60px; 
 }
 
 .header-container h1 {
-    margin: 0; /* Removes default margin to aid in centering */
+    margin: 0; 
 }
 
 .sorting-dropdown {
-    position: absolute; /* Positioned absolutely relative to its parent */
-    right: 50px; /* Adjust based on desired spacing from the right edge */
-    top: 50%; /* Aligns the top of the dropdown with the container's vertical center */
-    transform: translateY(-50%); /* Centers the dropdown vertically */
-    /* Additional styling for the dropdown */
+    position: absolute; 
+    right: 50px; 
+    top: 50%; 
+    transform: translateY(-50%); 
     padding: 5px;
 }

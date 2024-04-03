@@ -12,3 +12,13 @@ export async function getAllBugReports(){
         throw error;
     }
 }
+
+export async function generateBugReports(){
+let jsonDataArray = [];
+
+let jsonData = getAllBugReports();
+jsonDataArray.push(jsonData);
+
+console.log(jsonDataArray)
+
+}
