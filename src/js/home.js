@@ -1,5 +1,5 @@
-import { generateBugReports, getAllBugReports } from "./bugData.mjs";
+import { displayBugReports, getAllBugReports } from "./bugData.mjs";
 
 getAllBugReports();
 
-generateBugReports();
+displayBugReports();

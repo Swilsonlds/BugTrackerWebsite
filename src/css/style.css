@@ -91,22 +91,22 @@ a:hover::before {
     transform: scaleX(1);
 }
 
-.report-wrapper {
+/* .report-wrapper {
     max-width: 80%;
     margin: 20px auto;
     background-color: rgb(176, 202, 225);
     border-radius: 5px;
     border: 2px black solid;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+} */
+
 .report {
     position: relative; 
-    margin: 10px auto;
+    margin: 15px auto;
     max-width: 90%;
     background-color: white;
     border-radius: 5px;
     border: 2px black solid;
-    padding-right: 60px; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -150,4 +150,20 @@ a:hover::before {
     top: 50%; 
     transform: translateY(-50%); 
     padding: 5px;
+}
+
+.report-line {
+    height: 50px;
+}
+
+.report-line h3{
+    display: inline-block;
+}
+
+.report-line p{
+    display: inline-block;
+}
+
+.bottom-line {
+    padding-bottom: 25px;
 }
