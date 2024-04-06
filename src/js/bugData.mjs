@@ -25,26 +25,43 @@ export async function displayBugReports() {
         bugReports.forEach(bugReport => {
             // Create an <li> element
             const listItem = document.createElement('div');
-            listItem.classList.add("report")
+            listItem.classList.add("report");
+            listItem.setAttribute("id", bugReport._id);
 
             // Set the content of the <li> element with the bug report data
             listItem.innerHTML = 
-                `<div class="report-line"><h3>Bug Title:&nbsp </h3><p>${bugReport.bugTitle}</p></div>
-                <div class="report-line"><h3>Date Discovered:&nbsp </h3><p>${bugReport.dateDiscovered}</p></div>
-                <div class="report-line"><h3>Bug Environment:&nbsp </h3><p>${bugReport.environment}</p></div>
-                <div class="report-line"><h3>Severity:&nbsp </h3><p>${bugReport.severity}</p></div>
-                <div class="report-line"><h3>Expected Result:&nbsp </h3><p>${bugReport.expectedResult}</p></div>
-                <div class="report-line"><h3>Actual Result:&nbsp </h3><p>${bugReport.actualResult}</p></div>
-                <div class="report-line bottom-line"><h3>Steps to Reproduce:&nbsp </h3><p>${bugReport.stepsToReproduce}</p></div>
+                `<p><label>Bug Title:&nbsp </label>${bugReport.bugTitle}</p>
+                <p><label>Date Discovered:&nbsp </label>${bugReport.dateDiscovered}</p>
+                <p><label>Severity:&nbsp </label>${bugReport.severity}</p>
+                <p><label>Bug Environment:&nbsp </label>${bugReport.environment}</p>
+                <p><label>Expected Result:&nbsp </label>${bugReport.expectedResult}</p>
+                <p><label>Actual Result:&nbsp </label>${bugReport.actualResult}</p>
+                <p><label>Steps to Reproduce:&nbsp </label>${bugReport.stepsToReproduce}</p>
 
                 <div class="actions">
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <button class="edit-button" id="${bugReport._id}">Edit</button>
+                    <button class="delete-button" id="${bugReport._id}">Delete</button>
                 </div>`
             
 
             // Append the <li> element to the list
             bugList.appendChild(listItem);
+
+            // Adds href and event listener to edit button on each card
+            document.querySelectorAll('.edit-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const reportId = this.getAttribute('id')
+                    window.location.href = `/edit.html?reportId=${reportId}`
+                })
+            })
+
+            // Adds href and event listener to each document
+            document.querySelectorAll('.delete-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const reportId = this.getAttribute('id')
+                    window.location.href = `/delete.html?reportId=${reportId}`
+                })
+            })
         });
     } catch (error) {
         console.error('Error fetching bug reports: ', error);

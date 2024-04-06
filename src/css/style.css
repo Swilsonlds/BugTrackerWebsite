@@ -7,7 +7,6 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     background-color: #e5e6e6;
-    min-width: 390px;
 }
 
 .header {
@@ -91,44 +90,44 @@ a:hover::before {
     transform: scaleX(1);
 }
 
-/* .report-wrapper {
-    max-width: 80%;
-    margin: 20px auto;
-    background-color: rgb(176, 202, 225);
-    border-radius: 5px;
-    border: 2px black solid;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */
-
 .report {
     position: relative; 
     margin: 15px auto;
-    max-width: 90%;
+    padding: 20px;
+    max-width: 80%;
     background-color: white;
     border-radius: 5px;
     border: 2px black solid;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.report label {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.report p {
+    max-width: 75%;
+}
+
+
 .actions {
     position: absolute;
-    top: 80px;
-    right:20px;
+    top: 30%;
+    right: 2%;
     display: flex;
     flex-direction: column;
 }
 
 .actions button {
-    margin: 10px; 
+    margin: 10px 0px; 
     height: 50px;
+    width: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .actions button img {
     height: 50px;
-}
-
-.report h3 {
-    margin-left: 20px;
 }
 
 .header-container {
@@ -137,7 +136,7 @@ a:hover::before {
     justify-content: center; 
     align-items: center;
     padding: 10px; 
-    height: 60px; 
+    height: 100px; 
 }
 
 .header-container h1 {
@@ -146,24 +145,28 @@ a:hover::before {
 
 .sorting-dropdown {
     position: absolute; 
-    right: 50px; 
+    right: 10%; 
     top: 50%; 
     transform: translateY(-50%); 
     padding: 5px;
 }
 
-.report-line {
-    height: 50px;
+.edit-button{
+    background-color: rgb(235, 235, 151);
+    border-radius: 5px;
 }
 
-.report-line h3{
-    display: inline-block;
+.edit-button:hover{
+    background-color: rgb(214, 214, 119);
+    border-radius: 5px;
 }
 
-.report-line p{
-    display: inline-block;
+.delete-button{
+    background-color: rgb(221, 125, 125);
+    border-radius: 5px;
 }
 
-.bottom-line {
-    padding-bottom: 25px;
+.delete-button:hover{
+    background-color: rgb(187, 87, 102);
+    border-radius: 5px;
 }
