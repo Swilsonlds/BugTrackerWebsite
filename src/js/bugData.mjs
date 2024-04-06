@@ -90,7 +90,18 @@ export async function fillInForm() {
 
     let bugNameField = document.getElementById("bugName");
     let dateDiscoveredField = document.getElementById("dateDiscovered");
+    let severityField = document.getElementById("severity");
+    let bugEnvironmentField = document.getElementById("environment");
+    let expectedResultField = document.getElementById("expected");
+    let actualResultField = document.getElementById("actual");
+    let stepsToReproduceField = document.getElementById("steps");
+
 
     bugNameField.value = bugReport.bugTitle;
     dateDiscoveredField.value = bugReport.dateDiscovered;
+    severityField.value = bugReport.severity;
+    bugEnvironmentField.value = bugReport.environment;
+    expectedResultField.value = bugReport.expectedResult;
+    actualResultField.value = bugReport.actualResult;
+    stepsToReproduceField.value = bugReport.stepsToReproduce;
 }
