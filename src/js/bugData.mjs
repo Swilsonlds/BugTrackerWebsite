@@ -13,6 +13,23 @@ export async function getAllBugReports(){
     }
 }
 
+export async function getBugReportById(){
+    try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const bugId = urlParams.get('reportId');
+        const response = await fetch(`https://bugtracker-hag1.onrender.com/bugs/${bugId}`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok. ' + response.status)
+        }
+        const data = await response.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.error('Error fetching data: ', error);
+        throw error;
+    }
+}
+
 export async function displayBugReports() {
     try {
         // Fetch bug reports from the API
@@ -66,4 +83,14 @@ export async function displayBugReports() {
     } catch (error) {
         console.error('Error fetching bug reports: ', error);
     }
+}
+
+export async function fillInForm() {
+    const bugReport = await getBugReportById();
+
+    let bugNameField = document.getElementById("bugName");
+    let dateDiscoveredField = document.getElementById("dateDiscovered");
+
+    bugNameField.value = bugReport.bugTitle;
+    dateDiscoveredField.value = bugReport.dateDiscovered;
 }
