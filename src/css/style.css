@@ -69,11 +69,11 @@ body {
     justify-content: center; 
 }
 
-a {
+/* a {
     color: #18272F;
     position: relative;
     text-decoration: none;
-}
+} */
   
 a::before {
     content: '';
@@ -262,4 +262,20 @@ textarea {
 
 .hidden {
     display: none;
+}
+
+#about {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+#api {
+    font-weight: bold;
+    color: #06c;    
+}
+
+#api:hover {
+    font-weight: bold;
+    color: #06c; 
+    transition: none;   
 }
