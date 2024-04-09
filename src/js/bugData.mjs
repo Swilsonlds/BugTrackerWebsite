@@ -16,7 +16,8 @@ export async function getAllBugReports(){
 export async function getBugReportById(){
     try {
         const urlParams = new URLSearchParams(window.location.search);
-        const bugId = urlParams.get('reportId');
+        // const bugId = urlParams.get('reportId');
+        let bugId = localStorage.getItem('currentId');
         const response = await fetch(`https://bugtracker-hag1.onrender.com/bugs/${bugId}`);
         if (!response.ok) {
             throw new Error('Network response was not ok. ' + response.status)
@@ -68,7 +69,9 @@ export async function displayBugReports() {
             document.querySelectorAll('.edit-button').forEach(button => {
                 button.addEventListener('click', function() {
                     const reportId = this.getAttribute('id')
-                    window.location.href = `/edit.html?reportId=${reportId}`
+                    localStorage.setItem('currentId', reportId);
+                    window.location.href = `/edit.html`
+
                 })
             })
 
@@ -76,7 +79,9 @@ export async function displayBugReports() {
             document.querySelectorAll('.delete-button').forEach(button => {
                 button.addEventListener('click', function() {
                     const reportId = this.getAttribute('id')
-                    window.location.href = `/delete.html?reportId=${reportId}`
+                    localStorage.setItem('currentId', reportId);
+                    window.location.href = `/delete.html`
+
                 })
             })
         });
@@ -88,6 +93,7 @@ export async function displayBugReports() {
 export async function fillInForm() {
     const bugReport = await getBugReportById();
 
+    let bugReportId = document.getElementById("bugReportId")
     let bugNameField = document.getElementById("bugName");
     let dateDiscoveredField = document.getElementById("dateDiscovered");
     let severityField = document.getElementById("severity");
@@ -96,7 +102,7 @@ export async function fillInForm() {
     let actualResultField = document.getElementById("actual");
     let stepsToReproduceField = document.getElementById("steps");
 
-
+    bugReportId.value = bugReport._id;
     bugNameField.value = bugReport.bugTitle;
     dateDiscoveredField.value = bugReport.dateDiscovered;
     severityField.value = bugReport.severity;

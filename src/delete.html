@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/delete.js" type="module"></script>
-    <title>Delete Bug Report</title>
+    <title>Edit Bug Report</title>
 </head>
 <body>
     <header class="header">
@@ -20,27 +20,30 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <div class="logo-spacer"></div> <!-- Spacer added here -->
+        <div class="logo-spacer"></div>
     </header>
     <div id="report-wrapper">
         <div class="header-container">
             <h1>Delete Report</h1>
         </div>
-        <form id="form">
+        <form class="form" id="deleteForm">
+            <input type="hidden" id="bugReportId" name="bugReportId">
             <label for="bugName">Bug Title</label><br>
-            <input type="text" id="bugName" name="bugName" readonly><br>
+            <input type="text" id="bugName" name="bugName" required><br>
             <label for="dateDiscovered">Date Discovered</label><br>
-            <input type="text" id="dateDiscovered" name="dateDiscovered" readonly><br>
+            <input type="text" id="dateDiscovered" name="dateDiscovered" required><br>
             <label for="severity">Bug Severity</label><br>
-            <input type="text" id="severity" name="severity" readonly><br>
+            <input type="text" id="severity" name="severity" required><br>
             <label for="environment">Bug Environment</label><br>
-            <input type="text" id="environment" name="environment" readonly><br>
+            <input type="text" id="environment" name="environment" required><br>
             <label for="expected">Expected Result</label><br>
-            <input type="text" id="expected" name="expected" readonly><br>
+            <textarea id="expected" name="expected" required></textarea><br>
             <label for="actual">Actual Result</label><br>
-            <input type="text" id="actual" name="actual" readonly><br>
+            <textarea id="actual" name="actual" required></textarea><br>
             <label for="steps">Steps to Reproduce</label><br>
-            <input type="text" id="steps" name="steps" readonly><br>
+            <textarea id="steps" name="steps" required></textarea><br>
+            <button type="submit" class="submitButton" id="submitDeleteButton" value="Edit Bug Report">Delete Report</button>
+            
         </form>
     </div>
 </body>

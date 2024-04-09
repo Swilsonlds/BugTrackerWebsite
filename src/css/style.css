@@ -9,6 +9,10 @@ body {
     background-color: #e5e6e6;
 }
 
+#report-wrapper {
+    margin-bottom: 50px;
+}
+
 .header {
     background-color: #818592;
     padding: 10px;
@@ -193,7 +197,7 @@ textarea {
     resize: none;
 }
 
-  #form {
+.form {
     max-width: 60%;
     min-width: 50%;
     padding: 10px;
@@ -201,5 +205,32 @@ textarea {
     border-radius: 4px;
     background-color: white;
     margin: 0 auto;
+    margin-bottom: 50px;
 
+}
+
+.submitButton {
+    max-width: 50%;
+    background-color: rgb(235, 235, 151);
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.submitButton:hover {
+    max-width: 50%;
+    background-color: rgb(214, 214, 119);
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#submitDeleteButton {
+    background-color: rgb(212, 136, 136);
+}
+
+#submitDeleteButton:hover {
+    background-color: rgb(207, 98, 98);
 }
