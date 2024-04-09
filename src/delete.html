@@ -28,19 +28,19 @@
         <form class="form" id="deleteForm">
             <input type="hidden" id="bugReportId" name="bugReportId">
             <label for="bugName">Bug Title</label><br>
-            <input type="text" id="bugName" name="bugName" required><br>
+            <input type="text" id="bugName" name="bugName" readonly required><br>
             <label for="dateDiscovered">Date Discovered</label><br>
-            <input type="text" id="dateDiscovered" name="dateDiscovered" required><br>
+            <input type="text" id="dateDiscovered" name="dateDiscovered" readonly required><br>
             <label for="severity">Bug Severity</label><br>
             <input type="text" id="severity" name="severity" required><br>
             <label for="environment">Bug Environment</label><br>
-            <input type="text" id="environment" name="environment" required><br>
+            <input type="text" id="environment" name="environment" readonly required><br>
             <label for="expected">Expected Result</label><br>
-            <textarea id="expected" name="expected" required></textarea><br>
+            <textarea id="expected" name="expected" readonly required></textarea><br>
             <label for="actual">Actual Result</label><br>
-            <textarea id="actual" name="actual" required></textarea><br>
+            <textarea id="actual" name="actual" readonly required></textarea><br>
             <label for="steps">Steps to Reproduce</label><br>
-            <textarea id="steps" name="steps" required></textarea><br>
+            <textarea id="steps" name="steps" readonly required></textarea><br>
             <button type="submit" class="submitButton" id="submitDeleteButton" value="Edit Bug Report">Delete Report</button>
             
         </form>
