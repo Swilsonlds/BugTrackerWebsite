@@ -211,6 +211,7 @@ textarea {
 
 .submitButton {
     max-width: 50%;
+    font-size: large;
     background-color: rgb(235, 235, 151);
     border: 2px solid black;
     box-sizing: border-box;
@@ -233,4 +234,32 @@ textarea {
 
 #submitDeleteButton:hover {
     background-color: rgb(207, 98, 98);
+}
+
+#submitCreateButton {
+    background-color: rgb(108, 181, 108);
+}
+
+#submitCreateButton:hover {
+    background-color: rgb(80, 200, 61);
+}
+
+#messageSpan {
+    margin: 0 auto;
+    margin-top: 30px;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: rgb(140, 214, 140);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#messageBox {
+    text-align: center;
+    
+}
+
+.hidden {
+    display: none;
 }

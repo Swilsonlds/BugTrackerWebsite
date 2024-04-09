@@ -71,7 +71,6 @@ export async function displayBugReports() {
                     const reportId = this.getAttribute('id')
                     localStorage.setItem('currentId', reportId);
                     window.location.href = `/edit.html`
-
                 })
             })
 
@@ -110,4 +109,16 @@ export async function fillInForm() {
     expectedResultField.value = bugReport.expectedResult;
     actualResultField.value = bugReport.actualResult;
     stepsToReproduceField.value = bugReport.stepsToReproduce;
+}
+
+export function updateMessage() {
+    document.addEventListener('DOMContentLoaded', function() {
+        const box = document.getElementById('messageBox');
+        const messageSpan = document.getElementById('messageSpan')
+        let message = localStorage.getItem("message")
+        if (message) {
+          box.classList.remove('hidden');
+          messageSpan.innerHTML = message
+        }
+      });
 }

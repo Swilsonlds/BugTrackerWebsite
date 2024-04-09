@@ -14,22 +14,25 @@
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="create.html">Add Bug Report</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
         <div class="logo-spacer"></div> <!-- Spacer added here -->
     </header>
+    <div id="messageBox" class="hidden">
+        <span id="messageSpan"></span>
+    </div>
     <div id="report-wrapper">
         <div class="header-container">
             <h1>Bug Reports</h1>
-            <select class="sorting-dropdown">
+
+            <!-- <select class="sorting-dropdown">
                 <option value="newest">Newest</option>
                 <option value="oldest">Oldest</option>
                 <option value="severity">Severity</option>
-            </select>
+            </select> -->
         </div>
     </div>
 </body>

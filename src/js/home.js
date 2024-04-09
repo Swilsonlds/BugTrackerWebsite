@@ -1,3 +1,4 @@
-import { displayBugReports, getAllBugReports } from "./bugData.mjs";
+import { displayBugReports, updateMessage } from "./bugData.mjs";
 
 displayBugReports();
+updateMessage();
